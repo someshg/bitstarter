@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
         process.exit(1);
     }
 response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
+  response.write(content);
   response.end();
 //    response.send(content, "binary");
 });
