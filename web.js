@@ -11,7 +11,8 @@ app.get('/', function(request, response) {
         console.error('Could not read file "' + file + '". Error: ' + error);
         process.exit(1);
     }
-response.writeHead(200, {"Content-Type": "text/plain"});
+// response.writeHead(200, {"Content-Type": "text/plain"});
+  response.writeHead(200);
   response.write(content);
   response.end();
 //    response.send(content, "binary");
