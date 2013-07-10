@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
         console.error('Could not read file "' + file + '". Error: ' + error);
         process.exit(1);
     }
-    response.write(content, "binary");
+    response.send(content, "binary");
 });
 
 var port = process.env.PORT || 5000;
