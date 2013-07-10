@@ -11,7 +11,10 @@ app.get('/', function(request, response) {
         console.error('Could not read file "' + file + '". Error: ' + error);
         process.exit(1);
     }
-    response.send(content, "binary");
+response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello World");
+  response.end();
+//    response.send(content, "binary");
 });
 
 var port = process.env.PORT || 5000;
